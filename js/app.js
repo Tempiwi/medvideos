@@ -119,12 +119,12 @@ function title(path) {
     var fileNameDecoded = decodeURIComponent(fileName.replace(/\+/g,  " "));
     var model = window.MODEL;
     if (model.is_search_page)
-        $('title').html(`Raposas - Resultados para "${model.q}"`);
+        $('title').html(`MedVideos - Resultados para "${model.q}"`);
     else
       if(!fileNameDecoded) {
-        $('title').html(`Raposas`);
+        $('title').html(`MedVideos`);
     } else {
-      $('title').html(`Raposas - ${fileNameDecoded}`);
+      $('title').html(`MedVideos - ${fileNameDecoded}`);
     }
 }
 
