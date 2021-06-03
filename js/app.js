@@ -31,7 +31,7 @@ function init() {
 <footer class="footer mt-auto py-3 text-muted ${UI.footer_style_class}" style="${UI.fixed_footer ?'position: fixed; ': ''}left: 0; bottom: 0; width: 100%; color: white; z-index: 9999;"> <div class="container" style="width: auto; padding: 0 10px;">
 <p style="text-align: center;"><i class="fab fa-creative-commons-pd"></i> ${UI.copyright_year} - ${UI.company_name}.
 Todos os direitos liberados. <a href="https://www.youtube.com/watch?v=LXilEPmkoQY"
-target="_blank">Copiar não é roubar</a>.</p> </div> </footer>
+target="_blank">Copiar não é roubar.</a></p> </div> </footer>
   `;
     $('body').html(html);
 }
