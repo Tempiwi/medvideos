@@ -833,7 +833,7 @@ function file_video(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
 <div class="btn-group text-center">
-    <a href="${url}" type="button" class="btn btn-primary">Download</a>
+    <a href="https://drive.google.com/uc?export=download&id=${obj.id}" type="button" class="btn btn-primary">Download</a>
 </div>
 <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copiar</span> </button>
 <br>
