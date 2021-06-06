@@ -1,6 +1,6 @@
 # MedVideos
 
-O código-fonte deste indexador é open-source e foi derivado de um projeto pré-existente criado por ParveenBhadooOfficial (créditos abaixo). Se você é um programador e deseja contribuir ou simplesmente acessar o nosso código, você pode encontrar o nosso repositório no GitHub clicando [aqui](https://github.com/neelygenet/raposas).
+O código-fonte deste indexador é open-source e foi derivado de um projeto pré-existente criado por ParveenBhadooOfficial (créditos abaixo).
 
 
 
