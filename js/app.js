@@ -149,9 +149,36 @@ function nav(path) {
     // Dropdown to select different drive roots.
 
     html += `<li class="nav-item">
+    <a class="nav-link" href="https://docs.raposas.net/Contribuir" target="_blank"><i class="fas fa-folder"
+            class="basicIcon"></i> Contribuir</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="https://torrents.raposas.net" target="_blank"><i class="fas fa-save"
+            class="basicIcon"></i> Torrents</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="https://docs.raposas.net/flashcards" target="_blank"><i class="fas fa-hat-wizard"
+    	    class="basicIcon"></i> Flashcards</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="https://docs.raposas.net/Doar" target="_blank"><i class="fas fa-hand-holding-usd"
+            class="basicIcon"></i>
+        Doar</a>
+</li> <li class="nav-item">
     <a class="nav-link" href="https://t.me/medcelvid" target="_blank"><i class="fab fa-telegram"></i>
         Telegram</a>
 </li>`;
+	
+	html += `
+    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://docs.raposas.net/Copyright" target="_blank"><i
+                        class="far fa-copyright" class="basicIcon"></i> Política de Copyright</a>
+                <a class="dropdown-item" href="https://docs.raposas.net/Privacidade" target="_blank"><i
+                        class="fas fa-user-secret" class="basicIcon"></i> Política de Privacidade</a>
+            </div>
+        </li>`;
 
 
     var search_text = model.is_search_page ? (model.q || '') : '';
