@@ -150,7 +150,7 @@ function nav(path) {
 
     html += `
 <li class="nav-item">
-    <a class="nav-link" href="0 - Torrents" target="_blank"><i class="fas fa-save"
+    <a class="nav-link" href="https://medvideos.su/0:/0 - Torrents/" target="_blank"><i class="fas fa-save"
             class="basicIcon"></i> Torrents</a>
 </li>
 <li class="nav-item">
