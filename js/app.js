@@ -151,7 +151,7 @@ function nav(path) {
             class="basicIcon"></i> Torrents</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="https://docs.medvideos.su/flashcards" target="_blank"><i class="fas fa-hat-wizard"
+    <a class="nav-link" href="https://medvideos.su/0:/2 - Flashcards/" target="_blank"><i class="fas fa-hat-wizard"
     	    class="basicIcon"></i> Flashcards</a>
 </li>
 <li class="nav-item">
