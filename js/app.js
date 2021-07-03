@@ -245,6 +245,7 @@ function list(path) {
     <ol class="breadcrumb" id="folderne"><li class="breadcrumb-item"><a href="/">Início</a></li>`;
   var navfulllink = window.location.pathname;
   var navarray = navfulllink.trim('/').split('/');
+  var cur = window.current_drive_order || 0;
   var p = '/' + cur + ':/';
   if (navarray.length > 1) {
       navarray.shift();
