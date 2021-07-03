@@ -147,11 +147,11 @@ function nav(path) {
 
     html += `
 <li class="nav-item">
-    <a class="nav-link" href="https://medvideos.su/0:/0 - Torrents/" target="_self"><i class="fas fa-save"
+    <a class="nav-link" href="https://medvideos.su/0:/0 - Torrents/"><i class="fas fa-save"
             class="basicIcon"></i> Torrents</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="https://medvideos.su/0:/2 - Flashcards/" target="_blank"><i class="fas fa-hat-wizard"
+    <a class="nav-link" href="https://medvideos.su/0:/2 - Flashcards/"><i class="fas fa-hat-wizard"
     	    class="basicIcon"></i> Flashcards</a>
 </li>
 <li class="nav-item">
@@ -245,7 +245,7 @@ function list(path) {
     <ol class="breadcrumb" id="folderne"><li class="breadcrumb-item"><a href="/">Início</a></li>`;
   var navfulllink = window.location.pathname;
   var navarray = navfulllink.trim('/').split('/');
-  var p = '/';
+  var p = '/' + cur + ':/';
   if (navarray.length > 1) {
       navarray.shift();
       for (var i in navarray) {
