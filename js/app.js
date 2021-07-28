@@ -4,6 +4,9 @@ function init() {
     var html = `<header>
    <div id="nav">
    </div>
+   <!-- TrustBox script -->
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <!-- End TrustBox script -->
 </header>
 <div>
 <div id="content" style="padding-top: ${UI.header_padding}px;${UI.fixed_footer ?' padding-bottom: clamp(170px, 100%, 300px);': ''}">
