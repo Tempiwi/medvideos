@@ -26,8 +26,8 @@ function init() {
 </div>
 <br>
 <footer class="footer mt-auto py-3 text-muted ${UI.footer_style_class}" style="${UI.fixed_footer ?'position: fixed; ': ''}left: 0; bottom: 0; width: 100%; color: white; z-index: 9999;"> <div class="container" style="width: auto; padding: 0 10px;">
-<!-- TrustBox widget - Micro Review Count -->
-<div class="trustpilot-widget" data-locale="pt-BR" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="610158226f52870001bc34bc" data-style-height="24px" data-style-width="100%" data-theme="dark">
+<!-- TrustBox widget - Review Collector -->
+<div class="trustpilot-widget" data-locale="pt-BR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="610158226f52870001bc34bc" data-style-height="52px" data-style-width="100%">
   <a href="https://br.trustpilot.com/review/medvideos.ga" target="_blank" rel="noopener">Trustpilot</a>
 </div>
 <!-- End TrustBox widget -->
