@@ -12,7 +12,7 @@ const serviceaccounts = [];
 const randomserviceaccount = serviceaccounts[Math.floor(Math.random()*serviceaccounts.length)];
 
 const authConfig = {
-    "siteName": "Raposas", // Website name
+    "siteName": "MedVideos", // Website name
     "client_id": "", // Client id from Google Cloud Console
     "client_secret": "", // Client Secret from Google Cloud Console
     "refresh_token": "", // Authorize token
@@ -128,6 +128,9 @@ function html(current_drive_order = 0, model = {}) {
     window.current_drive_order = ${current_drive_order};
     window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   </script>
+  <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
   <script src="${uiConfig.jsdelivr_cdn_src}@${uiConfig.version}/dist/jquery.min.js"></script>
   <script src="${uiConfig.jsdelivr_cdn_src}@${uiConfig.version}/dist/fontawesome.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@${uiConfig.bootswatch_version}/dist/slate/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
