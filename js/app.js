@@ -26,6 +26,11 @@ function init() {
 </div>
 <br>
 <footer class="footer mt-auto py-3 text-muted ${UI.footer_style_class}" style="${UI.fixed_footer ?'position: fixed; ': ''}left: 0; bottom: 0; width: 100%; color: white; z-index: 9999;"> <div class="container" style="width: auto; padding: 0 10px;">
+<!-- TrustBox widget - Review Collector -->
+<div class="trustpilot-widget" style="text-align: center;" data-locale="pt-BR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="610158226f52870001bc34bc" data-style-height="52px" data-style-width="100%">
+  <a href="https://br.trustpilot.com/review/medvideos.ga" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
 <p style="text-align: center;"><i class="fab fa-creative-commons-pd"></i> ${UI.copyright_year} - ${UI.company_name}.
 Todos os direitos liberados. <a href="https://www.youtube.com/watch?v=LXilEPmkoQY"
 target="_blank">Copiar não é roubar.</a></p> </div> </footer>
