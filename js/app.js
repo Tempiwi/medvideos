@@ -32,7 +32,7 @@ function init() {
 </div>
 <!-- End TrustBox widget -->
 
-<br/><p style="text-align: center;"><i class="fab fa-creative-commons-pd"></i> ${UI.copyright_year} - ${UI.company_name}.
+<br><p style="text-align: center;"><i class="fab fa-creative-commons-pd"></i> ${UI.copyright_year} - ${UI.company_name}.
 Todos os direitos liberados. <a href="https://www.youtube.com/watch?v=LXilEPmkoQY"
 target="_blank">Copiar não é roubar.</a></p> </div> </footer>
   `;
