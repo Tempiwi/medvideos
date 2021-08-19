@@ -153,11 +153,11 @@ function nav(path) {
 
     html += `
 <li class="nav-item">
-    <a class="nav-link" href="https://medvideos.su/0 - Torrents/"><i class="fas fa-save"
+    <a class="nav-link" href="/Torrents/"><i class="fas fa-save"
             class="basicIcon"></i> Torrents</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="https://medvideos.su/2 - Flashcards/"><i class="fas fa-hat-wizard"
+    <a class="nav-link" href="/Flashcards/"><i class="fas fa-hat-wizard"
     	    class="basicIcon"></i> Flashcards</a>
 </li>
 <li class="nav-item">
