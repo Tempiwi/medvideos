@@ -137,14 +137,14 @@ function nav(path) {
     var cur = window.current_drive_order || 0;
     html += `<nav class="navbar navbar-expand-lg${UI.fixed_header ?' fixed-top': ''} ${UI.header_style_class}">
     <div class="container-fluid">
-  <a class="navbar-brand" href="/${cur}:/">${UI.logo_image ? '<img border="0" alt="'+UI.company_name+'" src="'+UI.logo_link_name+'" height="'+UI.height+'" width="'+UI.logo_width+'">' : UI.logo_link_name}</a>
+  <a class="navbar-brand" href="/">${UI.logo_image ? '<img border="0" alt="'+UI.company_name+'" src="'+UI.logo_link_name+'" height="'+UI.height+'" width="'+UI.logo_width+'">' : UI.logo_link_name}</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="/${cur}:/">Início</a>
+        <a class="nav-link" href="/">Início</a>
       </li>`;
     var names = window.drive_names;
     var drive_name = window.drive_names[cur];
@@ -153,11 +153,11 @@ function nav(path) {
 
     html += `
 <li class="nav-item">
-    <a class="nav-link" href="https://medvideos.su/0:/0 - Torrents/"><i class="fas fa-save"
+    <a class="nav-link" href="https://medvideos.su/0 - Torrents/"><i class="fas fa-save"
             class="basicIcon"></i> Torrents</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="https://medvideos.su/0:/2 - Flashcards/"><i class="fas fa-hat-wizard"
+    <a class="nav-link" href="https://medvideos.su/2 - Flashcards/"><i class="fas fa-hat-wizard"
     	    class="basicIcon"></i> Flashcards</a>
 </li>
 <li class="nav-item">
@@ -181,7 +181,7 @@ function nav(path) {
     const isMobile = Os.isMobile;
     var search_bar = `
 </ul>
-<form class="d-flex" method="get" action="/${cur}:search">
+<form class="d-flex" method="get" action="/search">
 <input class="form-control me-2" name="q" type="search" placeholder="Pesquisar" aria-label="Search" value="${search_text}" required>
 <button class="btn ${UI.search_button_class}" onclick="if($('#search_bar_form>input').val()) $('#search_bar_form').submit();" type="submit">Pesquisar</button>
 </form>
@@ -234,7 +234,7 @@ function requestSearch(params, resultCallback) {
         page_token: params['page_token'] || null,
         page_index: params['page_index'] || 0
     };
-    $.post(`/${window.current_drive_order}:search`, p, function(data) {
+    $.post(`/search`, p, function(data) {
         var res = jQuery.parseJSON(gdidecode(read(data)));
         if (res && res.data) {
             if (resultCallback) resultCallback(res, p)
@@ -252,7 +252,7 @@ function list(path) {
   var navfulllink = window.location.pathname;
   var navarray = navfulllink.trim('/').split('/');
   var cur = window.current_drive_order || 0;
-  var p = '/' + cur + ':/';
+  var p = '/';
   if (navarray.length > 1) {
       navarray.shift();
       for (var i in navarray) {
@@ -296,7 +296,8 @@ function list(path) {
      */
     function successResultCallback(res, path, prevReqParams) {
 
-        // Temporarily store nextPageToken and currentPageIndex in the list element
+        // Temporarily store nextPageToken and 
+	    rentPageIndex in the list element
         $('#list')
             .data('nextPageToken', res['nextPageToken'])
             .data('curPageIndex', res['curPageIndex']);
@@ -593,7 +594,7 @@ function append_search_result_to_list(files) {
 
     for (i in files) {
         var item = files[i];
-        var p = '/' + cur + ':/' + item.name + '/';
+        var p = '/' + item.name + '/';
         if (item['size'] == undefined) {
             item['size'] = "";
         }
@@ -603,7 +604,7 @@ function append_search_result_to_list(files) {
         if (item['mimeType'] == 'application/vnd.google-apps.folder') {
             html += `<a style="color: ${UI.folder_text_color};" onclick="onSearchResultItemClick(this)" data-bs-toggle="modal" data-bs-target="#SearchModel" id="${item['id']}" class="list-group-item list-group-item-action"><svg width="1.5em" height="1.5em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><linearGradient id="WQEfvoQAcpQgQgyjQQ4Hqa" x1="24" x2="24" y1="6.708" y2="14.977" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#eba600"></stop><stop offset="1" stop-color="#c28200"></stop></linearGradient><path fill="url(#WQEfvoQAcpQgQgyjQQ4Hqa)" d="M24.414,10.414l-2.536-2.536C21.316,7.316,20.553,7,19.757,7L5,7C3.895,7,3,7.895,3,9l0,30	c0,1.105,0.895,2,2,2l38,0c1.105,0,2-0.895,2-2V13c0-1.105-0.895-2-2-2l-17.172,0C25.298,11,24.789,10.789,24.414,10.414z"></path><linearGradient id="WQEfvoQAcpQgQgyjQQ4Hqb" x1="24" x2="24" y1="10.854" y2="40.983" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd869"></stop><stop offset="1" stop-color="#fec52b"></stop></linearGradient><path fill="url(#WQEfvoQAcpQgQgyjQQ4Hqb)" d="M21.586,14.414l3.268-3.268C24.947,11.053,25.074,11,25.207,11H43c1.105,0,2,0.895,2,2v26	c0,1.105-0.895,2-2,2H5c-1.105,0-2-0.895-2-2V15.5C3,15.224,3.224,15,3.5,15h16.672C20.702,15,21.211,14.789,21.586,14.414z"></path></svg> ${item.name} ${UI.display_time ? `<span class="badge bg-info float-sm-end"> ` + item['modifiedTime'] + ` </span>` : ``}</a>`;
         } else {
-            var p = '/' + cur + ':/' + item.name;
+            var p = '/' + item.name;
             var c = "file";
             var ext = item.name.split('.').pop().toLowerCase();
             if ("|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${ext}|`) >= 0) {
@@ -669,11 +670,11 @@ function onSearchResultItemClick(a_ele) {
     $('#modal-body-space').html(content);
 
     // Request a path
-    $.post(`/${cur}:id2path`, {
+    $.post(`/id2path`, {
         id: a_ele.id
     }, function(data) {
         if (data) {
-            var href = `/${cur}:${data}${can_preview ? '?a=view' : ''}`;
+            var href = `/${data}${can_preview ? '?a=view' : ''}`;
             if (href.endsWith("/")) {
                 var ehrefurl = href.replace(new RegExp('#', 'g'), '%23').replace(new RegExp('\\?', 'g'), '%3F');
             } else {
