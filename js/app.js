@@ -296,8 +296,7 @@ function list(path) {
      */
     function successResultCallback(res, path, prevReqParams) {
 
-        // Temporarily store nextPageToken and 
-	    rentPageIndex in the list element
+        // Temporarily store nextPageToken and rentPageIndex in the list element
         $('#list')
             .data('nextPageToken', res['nextPageToken'])
             .data('curPageIndex', res['curPageIndex']);
