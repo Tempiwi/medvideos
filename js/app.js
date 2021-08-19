@@ -91,7 +91,7 @@ function render(path) {
     title(path);
     nav(path);
     // .../0: This
-    var reg = /\/\d+:$/g;
+    var reg = /\/$/g;
     if (window.MODEL.is_search_page) {
         // Used to store the state of some scroll events
         window.scroll_status = {
